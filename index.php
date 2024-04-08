@@ -1,6 +1,7 @@
     <?php
         include_once("header.php");
-       
+      
+     
          $name = $_GET["name"];
          #le o conteudo do arquivo em json
          $json =  file_get_contents('exemplo.json');
@@ -8,12 +9,12 @@
          $config = json_decode($json, true);
         
           $pasta = dir($name."/");
-          $diretorio = "../../../home/Documentos/".$name;
+          $diretorio = $name;
           echo getcwd();
+          
             #verificacao se o caminho é um diretorio
        if(is_dir($diretorio))
-         {
-
+         {  
             #obtem uma lista de arquivos  e diretorios no diretorio
             $arquivos = scandir($diretorio);
 
