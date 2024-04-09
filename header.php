@@ -13,19 +13,21 @@
   <!--  <img class="arrow" src="img/download-da-nuvem.png" alt=""> -->
     </div>
     <br>
-     <main>
+
+    <main>
       <div>
-          <div class="img"></div>
-        <a href="index.php?name=CONSTRUTORA"> <h2 >CONSTRUTORA</h2></a>
-      </div>
+           <div class="image" id="construtora">teifepoifjew</div>
+           <a href="index.php?name=CONSTRUTORA">
+           <h2 >CONSTRUTORA</h2></a>
+       </div>
       <div>
-          <div class="img"></div>
-        
-        <a href="index.php?name=GESTOR_DE_FAZENDAS"> <h2 >GESTOR DE FAZENDAS</h2></a>
-      </div>
+           <div class="image" id="gestor">  </div>
+           <a href="index.php?name=GESTOR_DE_FAZENDAS">
+           <h2 >GESTOR DE FAZENDAS</h2></a>
+       </div>
       <div>
-            <div class="img"></div>
-           <a href="index.php?name=GTS"> <h2 >GTS</h2></a>
-      </div>
-     </main>
+            <div class="image" id="gts">  </div>
+            <a href="index.php?name=GTS"> <h2 >GTS</h2></a>
+       </div>
+    </main>
 

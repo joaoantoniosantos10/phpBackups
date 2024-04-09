@@ -1,44 +1,31 @@
-    <?php
-        include_once("header.php");
-      
-     
-         $name = $_GET["name"];
-         #le o conteudo do arquivo em json
-         $json =  file_get_contents('exemplo.json');
-         #decodifica o JSON para um array associativo
-         $config = json_decode($json, true);
-        
-          $pasta = dir($name."/");
-          $diretorio = $name;
-          echo getcwd();
-          
-            #verificacao se o caminho é um diretorio
-       if(is_dir($diretorio))
-         {  
-            #obtem uma lista de arquivos  e diretorios no diretorio
-            $arquivos = scandir($diretorio);
+<?php
+include("header.php");
+include_once("CLASSES/validacao.php");
+$name = $_GET["name"];
+$password = $_GET["password"];
+$validacao = new Validacao($name, $id);
+?>
 
-            #ja aqui remove os diretorios '.' e '..' da lista
-            $arquivos = array_diff($arquivos, array('.', '..'));
+<main>
 
-            //Bora interar agora a list de arquivos
-            //Estou tentando passar tanto a pasta quanto o nome do arquivo para ser aberto
-            
-            foreach($arquivos as $arquivo){ 
-    ?>
-            <br>
-               <a href="<?php echo $pasta->path.$arquivo ?>">
-    <?php
-               echo $arquivo;
-    ?>
-               </a>
-            <br>
-    <?php
-         }
-         }else 
-         {
-                echo "O diretorio nao existe";
-         }
+<form action="">
+ 
+<fieldset>
+<label for="name">Usuário</label>
+<input type="text" name="name" id="name">
+</fieldset>
 
- include_once("footer.php");        
-    ?>
+<fieldset>
+<label for="password">Senha</label>
+<input type="text" name="password" id="password">
+<img  src="img/chave.png" alt="">
+</fieldset>
+
+</form>
+
+
+</main>
+
+<?php
+include("footer.php");
+?>

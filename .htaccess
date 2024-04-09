@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^About_us$ Aboutus .html [NC]
+
+# definir o tempo de vida da sessao
+php_value session.gc_maxlifetime 3600
+
+#impedir que qualquer pessoa acesse o htacces 
+
+order allow, deny
+dent from all
+satisfy all

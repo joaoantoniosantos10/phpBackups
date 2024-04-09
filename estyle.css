@@ -6,16 +6,20 @@
 }
 
 
-#up-bar{
+#up-ba3r{
   color: rgb(0, 73, 6);
   display: flex;
   padding: 1em;
   background-image: linear-gradient(95deg, green, rgb(238, 255, 238), green);
 }
 
-.img{
-  background-color: black;
+.image{
   width: 200px;
   height: 200x;
   border-radius: 50%;
+  border: 1px solid red;
+}
+
+#construtora{
+  background-image:url("img/Construtora.png");
 }
